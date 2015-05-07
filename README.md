@@ -17,3 +17,17 @@ GODSqli ce présente en deux version :
 
   Une version "tout en un", aussi longue que l'original mais ne néssessitant rien d'autre, longue de 7913 caractères
   Une version "décentralisée", qui héberge toute la partie JS sur un serveur de votre choix, réduisant de plus de 90% la taille du script dans l'url, passant à 738 caractères !
+
+#Comment ça fonctionne
+
+Il suffit de mettre en ligne le contenu de source.js sur votre serveur, et d'injecter dans l'urlla syntaxe de syntax.txt en remplaçant "URL_OF_YOUR_HEBERGED_SCRIPT" par l'adresse de votre version hébergée de source.js
+Vous pouvez aussi choisir de prendre la version "all in one", qui ne néssessite pas d'hébergement externe du script mais est extrêmement longue (7900 caractères) et provoque souvent des problème du à la taille de l'url.
+
+#Changelog
+
+V1.0 : first release !
+
+#Futur 
+
+V1.1 : 
+Ajout de la création d'un dump au format CVS conforme
