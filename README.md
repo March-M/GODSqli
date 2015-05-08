@@ -13,19 +13,17 @@ IL est évident que cet outil NE DOIS PAS être utilisé dans un contexte malvei
 
 #Améliorations 
 
-GODSqli ce présente en deux version : 
-
-  Une version "tout en un", aussi longue que l'original mais ne néssessitant rien d'autre, longue de 7913 caractères
-  Une version "décentralisée", qui héberge toute la partie JS sur un serveur de votre choix, réduisant de plus de 90% la taille du script dans l'url, passant à 738 caractères !
+En plus des améliorations en cour d'ajout (dump de fichier par exemple), GODSqli a vu son système de dump recodé afin de fournir un dump au format CSV. 
+Sa taille à été considérablement réduite aussi, en externalisant le script JS, passant sa taille d'environ 7900 caractère a moins de 740!
 
 #Comment ça fonctionne
 
 Il suffit de mettre en ligne le contenu de source.js sur votre serveur, et d'injecter dans l'urlla syntaxe de syntax.txt en remplaçant "URL_OF_YOUR_HEBERGED_SCRIPT" par l'adresse de votre version hébergée de source.js
-Vous pouvez aussi choisir de prendre la version "all in one", qui ne néssessite pas d'hébergement externe du script mais est extrêmement longue (7900 caractères) et provoque souvent des problème du à la taille de l'url.
+La version All-in-one existant au début à été supprimée, elle étais devenue trop lourde pour 90% des serveurs si on y intégrais les mise a jour a partir de la v1.0.1, et surtout inutile au vu des améliorations disponible dans la v1.1, qui ne justifiais plus la présence de la "all-in-one", et puis ce n'est pas compliquée d'héberger le code du script JS sur des éditeur de texte en ligne avec fonction d'affichage "raw" ;)
 
 #Problème connu
 
-Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/ytour/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comm ça en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
+Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/your/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comm ça en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
 Utilisez l'addon HackBar sur firefox pour encoder en hexa votre url, ou le site www.rapidtables.com/convert/number/ascii-to-hex.htm 
 
 #Changelog
