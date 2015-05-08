@@ -30,7 +30,12 @@ Utilisez l'addon HackBar sur firefox pour encoder en hexa votre url, ou le site 
 
 #Changelog
 
-*V1.0.1* : Correction d'un bug faisant planter l'injection dans de rare cas. 
+**V1.1** : 
+Refonte du script de dump : 
+Le dump est désormais au format CSV
+Affiche une première ligne contenant les nom de tables avant les données
+
+**V1.0.1** : Correction d'un bug faisant planter l'injection dans de rare cas. 
 Imaginons, nous avons ce code : 
 
 $result = nl2br($mysql['result']['somevariable']);
@@ -39,9 +44,8 @@ echo $result;
 Et bien nl2br va venir nous faire chier et mettre des <br /> partout. ce qui fait beuger la première partie du script contenant les informations. Corrigé par le retrait des saut de ligne inutile ainsi que l'ajour de // à chaque fin de phrase pour commenter les éventuels <br /> ajouté.
 
 
-*V1.0* : first release !
+**V1.0** : first release !
 
 #Futur 
 
-*V1.1* : 
-Ajout de la création d'un dump au format CSV conforme
+v1.2 : Ajout d'infos en plus (hostane notament), amélioration de la page listant les colonnes d'une table, fonction de dump de fichier sur le serveur
