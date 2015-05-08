@@ -44,4 +44,4 @@ Et bien nl2br va venir nous faire chier et mettre des <br /> partout. ce qui fai
 #Futur 
 
 *V1.1* : 
-Ajout de la création d'un dump au format CVS conforme
+Ajout de la création d'un dump au format CSV conforme
