@@ -23,11 +23,25 @@ GODSqli ce présente en deux version :
 Il suffit de mettre en ligne le contenu de source.js sur votre serveur, et d'injecter dans l'urlla syntaxe de syntax.txt en remplaçant "URL_OF_YOUR_HEBERGED_SCRIPT" par l'adresse de votre version hébergée de source.js
 Vous pouvez aussi choisir de prendre la version "all in one", qui ne néssessite pas d'hébergement externe du script mais est extrêmement longue (7900 caractères) et provoque souvent des problème du à la taille de l'url.
 
+#Problème connu
+
+Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/ytour/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comm ça en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
+Utilisez l'addon HackBar sur firefox pour encoder en hexa votre url, ou le site www.rapidtables.com/convert/number/ascii-to-hex.htm 
+
 #Changelog
 
-V1.0 : first release !
+*V1.0.1* : Correction d'un bug faisant planter l'injection dans de rare cas. 
+Imaginons, nous avons ce code : 
+
+$result = nl2br($mysql['result']['somevariable']);
+echo $result;
+
+Et bien nl2br va venir nous faire chier et mettre des <br /> partout. ce qui fait beuger la première partie du script contenant les informations. Corrigé par le retrait des saut de ligne inutile ainsi que l'ajour de // à chaque fin de phrase pour commenter les éventuels <br /> ajouté.
+
+
+*V1.0* : first release !
 
 #Futur 
 
-V1.1 : 
+*V1.1* : 
 Ajout de la création d'un dump au format CVS conforme
