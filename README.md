@@ -23,10 +23,13 @@ La version All-in-one existant au début à été supprimée, elle étais devenu
 
 #Problème connu
 
-Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/your/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comme ceci, en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
+Parfois il peut arriver qu'un addslashes() ou autre pose problème avec les apostrophes présente dans l'url pour l'ajout de l'url du script.
+En attendant la correction du problème dans la v1.2, il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comme ceci, en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
 Utilisez l'addon HackBar sur firefox pour encoder en hexa votre url, ou le site www.rapidtables.com/convert/number/ascii-to-hex.htm 
 
 #Changelog
+
+**V1.1.1** : Update en passant pour corriger un problème dans le module de dump de table. En effet, quand le problème connu avec les apostrophe est présent, ce module ne fonctionnais pas, a cause de la première ligne du dump qui contenais des apostrophes pour afficher en clair le nom des tables. Réglé avec la fonction déjà existante "toHex" qui encode le tout en hexadécimal pour l'afficher en dur.
 
 **V1.1** : 
 Refonte du script de dump : 
