@@ -23,7 +23,7 @@ La version All-in-one existant au début à été supprimée, elle étais devenu
 
 #Problème connu
 
-Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/your/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comm ça en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
+Parfois il peut arriver qu'un addslashes() pose problème avec les 'http://www.url.com/of/your/script.js', dans ce cas il vous suffit d'encoder votre url en hexadécimal et lui faire prendre en compte comme ceci, en remplaçant " ,'URL_OF_YOUR_HEBERGED_SCRIPT', " par " ,0xYOUR_URL_HEXADECIMAL_ENCODED, ".
 Utilisez l'addon HackBar sur firefox pour encoder en hexa votre url, ou le site www.rapidtables.com/convert/number/ascii-to-hex.htm 
 
 #Changelog
@@ -39,7 +39,7 @@ Imaginons, nous avons ce code :
 $result = nl2br($mysql['result']['somevariable']);
 echo $result;
 
-Et bien nl2br va venir nous faire chier et mettre des <br /> partout. ce qui fait beuger la première partie du script contenant les informations. Corrigé par le retrait des saut de ligne inutile ainsi que l'ajour de // à chaque fin de phrase pour commenter les éventuels <br /> ajouté.
+Et bien nl2br va venir nous faire chier et mettre des < br /> partout. ce qui fait beuger la première partie du script contenant les informations. Corrigé par le retrait des saut de ligne inutile ainsi que l'ajour de // à chaque fin de phrase pour commenter les éventuels < br /> ajouté.
 
 
 **V1.0** : first release !
